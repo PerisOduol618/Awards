@@ -1,0 +1,60 @@
+{%extends "registration/base.html"%}
+{% load bootstrap4 %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <br>
+  
+    <!-- <div class="col-md-5" style="margin-top: 50px;"> -->
+      <img src="https://cpb-us-w2.wpmucdn.com/sites.udel.edu/dist/0/674/files/2017/08/Awards-honor-ribbon-us7myp.png" alt="insta">
+    </div>
+    
+      {% if form.errors %}
+      <p> Password or Username is incorrect </p>
+      {% endif %}
+
+      <div class="card" style="width: 20rem; margin-top:70px;">
+
+        <div class="card-body">
+          <h3 class="text-center" style="font-family: 'Lobster Two', cursive;">Awards</h3>
+        </div>
+        <div class="container">
+
+          <form action="/accounts/login/" method="post">
+            {% csrf_token %}
+            {% bootstrap_form form%}
+
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary btn-sm" value="Login">
+
+            </div>
+        </div>
+
+        <hr>
+        <p class="container">you dont have an account? <a href="/accounts/register/"> Sign Up</a></p>
+      </div>
+   
+
+  <!-- </div> -->
+
+  <input type="hidden" name="next" value="{{next}}">
+
+  </form>
+</div>
+
+</div>
+<div class="col-md-1"></div>
+<!-- <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div> -->
+<!-- empty div -->
+
+
+</div>
+</div>
+
+{% endblock %}
