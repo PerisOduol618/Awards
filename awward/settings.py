@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rates',
     'bootstrap4',
     'crispy_forms',
+    'tinymce',
 ]
 
 MIDDLEWARE = [
