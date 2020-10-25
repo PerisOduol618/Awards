@@ -14,8 +14,6 @@ class SignUpForm(UserCreationForm):
         fields = ('username','email','password1','password2')
 
 
-
-
 class UserUpdateForm(forms.ModelForm):
     email = forms.EmailField()
 
@@ -27,3 +25,9 @@ class ProfileUpdateForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields =['profile_pic', 'bio']
+
+
+class  NewProjectForm(forms.ModelForm):
+    class Meta:
+        model = Project
+        exclude = ['user',]
