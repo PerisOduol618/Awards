@@ -28,6 +28,7 @@ def create_user_profile(sender, instance, created, **kwargs):
     if created:
         Profile.objects.create(user=instance)
 
+
 class Project(models.Model):
     title = models.TextField(max_length=30)
     image = models.ImageField(upload_to = 'home/', blank=True)
@@ -40,6 +41,13 @@ class Project(models.Model):
     @classmethod
     def all_projects(cls) :
         projects = cls.objects.all()
+        return projects
+
+
+
+    @classmethod
+    def search_by_title(cls,search_term):
+        projects = cls.objects.filter(title__icontains=search_term)
         return projects
 
     def __str__(self):
