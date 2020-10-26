@@ -44,10 +44,10 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form> -->
 
-        <form class="navbar-form" role="search" action="">
+        <form class="navbar-form" role="search" action="{% url 'search_results' %}">
 
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search Article" name="article">
+              <input type="text" class="form-control" placeholder="Search" name="project">
               <div class="input-group-btn">
                 <button class="btn btn-default" type="submit"><i class="fas fa-search"></i></i></button>
               </div>
