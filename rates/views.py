@@ -27,12 +27,12 @@ def home(request):
             link=project.link,
             description=project.description,
             avatar=pic,
-            date_craeted=project.date_craeted
-           
+            date_craeted=project.date_craeted,
+            # author=project.user.username       
 
         )
         json_projects.append(obj)
-        print(json_projects)
+        # print(json_projects)
     
     return render(request, 'home.html', {"json_projects": json_projects})
 
