@@ -5,8 +5,8 @@
 <h1>Awwards</h1>
 
 {% for project in json_projects %}
-<img width="50x" height="50px" src="{{user.profile.profile_pic.url }}" alt="image">
-<p>{{project.username}}</p>
+<img width="50x" height="50px" src="{{project.avatar }}" alt="image">
+<p>{{project.author}}</p>
 
 
 <h3>
@@ -16,7 +16,8 @@
   project description is {{project.description}}
 </h4>
 <img width="200px" height="200px" src="{{project.image.url}}" alt="image">
-<p>{{project.link}}</p>
+<a class="btn btn-sm btn-info" href="{{project.link}}" target="_blank">view site</a>
+<p></p>
 <p><a href="{{project.link}}"></a></p>
 
 <p>date:{{project.date_craeted}}</p>
