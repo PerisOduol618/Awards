@@ -19,6 +19,7 @@ class Profile(models.Model):
     
     def delete_user(self):
         self.delete()
+    
 
 
 @receiver(post_save, sender=User)
@@ -35,6 +36,11 @@ class Project(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, default='', null=True ,related_name='author')
     date_craeted= models.DateField(auto_now_add=True )
     
+
+    @classmethod
+    def all_projects(cls) :
+        projects = cls.objects.all()
+        return projects
 
     def __str__(self):
         return self.title
