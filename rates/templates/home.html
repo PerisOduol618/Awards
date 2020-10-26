@@ -1,68 +1,25 @@
 {% extends 'base.html' %}
 {%block content%}
-
+{{ block.super}}
 
 <h1>Awwards</h1>
 
 {% for project in json_projects %}
 <img width="50x" height="50px" src="{{user.profile.profile_pic.url }}" alt="image">
+<p>{{project.username}}</p>
 
 
-<h1>
+<h3>
   Title:{{project.title}}
-</h1>
-<h2>
+</h3>
+<h4>
   project description is {{project.description}}
-</h2>
-<img width="80px" height="100px" src="{{project.image.url}}" alt="image">
-<p>link:{{project.link}}</p>
+</h4>
+<img width="200px" height="200px" src="{{project.image.url}}" alt="image">
+<p>{{project.link}}</p>
+<p><a href="{{project.link}}"></a></p>
 
-<p>date;{{project.date_craeted}}</p>
+<p>date:{{project.date_craeted}}</p>
 {% endfor %}
-<!-- {{ block.super}}
-<h1>Awwards</h1>
 
-<div>
-    <div class="container" style="margin-top: 100px;">
-      {%for new_project in projects %}
-      <div>
-        <div class="row">
-  
-          <div class="col-md-8  m-auto card">
-            <a href="project">
-              <img width="50px" height="50px" style="border-radius: 50%;" class="img img-circle" src="{{new_project.avatar}}"
-                alt="{{new_project.author}}" srcset="">
-              <span><b>{{new_project.title}}</b></span>
-            </a>
-  
-  
-  
-            <div class="card mb-3">
-              <img src="{{new_project.image}}" class="img-responsive card-img-top" alt="image1">
-            </div>
-  
-            <div class="card-body">
-  
-              <p>{{new_project.link}}</p>
-              <p> <b>{{new_project.author}} </b>{{new_project.description}}</p>
-             
-            </div>
-  
-  
-            <div class="card-footer">
-           <a href=""> <span class="info""><i class="far fa-heart fa-1x" ></i></span>  </a>
-         <a href=""><i class="far fa-comment"></i></a>  
-  
-              <a href=""><i class="far fa-paper-plane"></i></a>
-  
-            </div>
-          </div>
-        </div>
-      </div><br><br>
-    </div>
-  
-    {% endfor %}
-  </div>
-  </div> -->
-  
 {%endblock%}
