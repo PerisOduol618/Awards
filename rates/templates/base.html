@@ -1,5 +1,6 @@
 {% load bootstrap4 %}
 {% load static%}
+{% load ratings %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,12 +14,18 @@
 
     {% block styles %}
         {% bootstrap_css %}
+        <!-- css -->
         <link rel="stylesheet" href="{% static 'css/styles.css'%}">
-        <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
-
+        <!-- fint-awesome -->
+         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
-
-        <link href="css-circular-prog-bar.css" rel="stylesheet">
+        <!-- goole fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;500&display=swap" rel="stylesheet">
+       <!-- star rating -->
+       <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+       <link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
     {% endblock %}
 
     
@@ -26,13 +33,18 @@
 
 <body>
     {% include "navbar.html" %}
+    
 
     {% block content%}
     {% endblock%}
     {% block scripts %}
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
      {% bootstrap_javascript %}
      
     {% endblock %}
+    {%include "footer.html"%}
 </body>
 </html>
