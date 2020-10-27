@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'bootstrap4',
     'crispy_forms',
     'tinymce',
-    'star_ratings'
     'rest_framework',
 ]
 
