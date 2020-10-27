@@ -6,6 +6,7 @@ from django.contrib.auth import authenticate, login, logout
 from .forms import Project, UserUpdateForm, ProfileUpdateForm, SignUpForm, NewProjectForm
 from django.contrib import messages
 from .models import Profile, Project
+from rest_framework import status
 
 
 @login_required(login_url='/accounts/login/')
