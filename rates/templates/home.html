@@ -1,38 +1,53 @@
 {% extends 'base.html' %}
 {%block content%}
 {{ block.super}}
+<div>
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg" alt="First slide">
+        <div class="carousel-caption">
+        
+          <img src="https://ucarecdn.com/257afbc7-9e6d-4984-9939-f83076ad6d84/progressremovebgpreview.png" alt="">
+          <h3 class="h3-responsive text-center">WE ARE HERE FOR YOU</h3><br><br><br><br><br>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(16).jpg" alt="Second slide">
+        <div class="carousel-caption">
+        
+          <img src="https://ucarecdn.com/257afbc7-9e6d-4984-9939-f83076ad6d84/progressremovebgpreview.png" alt="">
+          <h3 class="h3-responsive text-center">WE ARE HERE FOR YOU</h3><br><br><br><br><br>
+        </div>
+      </div>
 
-<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg"
-        alt="First slide">
+      <div class="carousel-item">
+        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(17).jpg" alt="Third slide">
+        <div class="carousel-caption">
+        
+          <img src="https://ucarecdn.com/257afbc7-9e6d-4984-9939-f83076ad6d84/progressremovebgpreview.png" alt="">
+          <h3 class="h3-responsive text-center">WE ARE HERE FOR YOU</h3><br><br><br><br><br>
+        </div>
+      </div>
     </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(16).jpg"
-        alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(17).jpg"
-        alt="Third slide">
-    </div>
+    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
 </div>
+
 
 {% for project in json_projects %}
 
 <div class="container">
   <div class="pt-5 mt-3 pb-3 col-sm-6 col-md-4">
 
-  
+
     <div class="row">
       <div class="">
         <div class="card-group">
@@ -45,7 +60,7 @@
             </div>
 
             <div class="card-body">
-              <!--Title-->
+
               <a href="{{project.link}}">view site</a>
 
               <p class="card-text">project description:{{project.description}}</p>
