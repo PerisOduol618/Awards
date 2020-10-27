@@ -9,8 +9,6 @@ from .models import Profile, Project
 
 
 @login_required(login_url='/accounts/login/')
-# def home(request):
-#     return render(request,'home.html')
 def home(request):
     project= Project.all_projects()
     json_projects = []
@@ -28,7 +26,8 @@ def home(request):
             description=project.description,
             avatar=pic,
             date_craeted=project.date_craeted,
-            author=project.user.username       
+            author=project.user.username  
+                 
 
         )
         json_projects.append(obj)

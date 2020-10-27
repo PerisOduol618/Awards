@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'bootstrap4',
     'crispy_forms',
     'tinymce',
+    'star_ratings'
 ]
 
 MIDDLEWARE = [
@@ -135,3 +136,8 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+STAR_RATINGS_RERATE = False
+STAR_RATINGS_RANGE = 5
+STAR_RATINGS_ANONYMOUS = False
+

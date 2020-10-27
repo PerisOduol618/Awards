@@ -1,37 +1,55 @@
-{%extends 'base.html'%} 
+{%extends 'base.html'%}
 {% block content %}
 <div class="container">
 
-  <div class="row">
-    {% if projects%}
-      <h2>Found {{ projects|length }} of searched term {{message}}</h2>
-    {% else %}
-      <h2> Found 0 projects for the search term {{message}}</h2>
-    {% endif %}
+    <div class="row">
+        {% if projects%}
+        <h2>Found {{ projects|length }} of searched term {{message}}</h2>
+        {% else %}
+        <h2> Found 0 projects for the search term {{message}}</h2>
+        {% endif %}
 
-  </div>
+    </div>
 
-  <div class="row">
+    <div class="row">
 
-    {% if projects %}
-    {% for project in projects %}
-      <!-- <div class="col-sm-6 col-md-3">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <a href="" data-toggle="modal" data-target="#staticBackdrop{{photos.id}}">
-                    <img src="{{project.avatar}}" class="img-responsive styled" alt="cant show"></a>
+        {% if projects %}
+        {% for project in projects %}
+        <div class="col-md-4">
+            <div class="card-group">
+                <div class="card card-personal mb-4">
+                    <div class="view">
+                        <img class="card-img-top" src="{{project.image.url}}" alt="Card image cap">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <div class="card-body">
+
+                        <a href="{{project.link}}">view site</a>
+
+                        <p class="card-text">project description:{{project.description}}</p>
+
+                        <hr>
+                        <span> <img style="border-radius: 50%; width:30px; height:30px; " src="{{project.avatar }}"
+                                alt="image">By
+                            <b>{{project.author}}</b></span>
+
+                        <p class="card-meta float-right">{{project.date_craeted}}</p>
+                    </div>
+                </div>
             </div>
-            <div class="panel-footer text-center">{{project.author}}</b></div>
-        </div> -->
-        <!-- <img width="50x" height="50px" src="{{project.avatar }}" alt="image">
-        <p>{{project.author}}</p> -->
-        <!-- <a class="btn btn-sm btn-info" href="{{project.link}}" target="_blank">view site</a>
-        <img width="200px" height="200px" src="{{project.image.url}}" alt="image">
-          <h1>{{project.title}}</h1>
-          {{project.description}}
-          <p>date:{{project.date_craeted}}</p>
-      </div> -->
-      <div class="container">
+            <!-- <img class="card-img-top" src="{{project.image.url}}" alt="Card image cap"> -->
+            <!-- <div class="pt-5 mt-3 pb-3 col-sm-6 col-md-4">
+  
+       
+    </div> -->
+
+
+        </div>
+
+        <!-- <div class="container">
         <div class="pt-5 mt-3 pb-3 col-sm-6 col-md-4">
       
         
@@ -47,7 +65,6 @@
                   </div>
       
                   <div class="card-body">
-                    <!--Title-->
                     <a href="{{project.link}}">view site</a>
       
                     <p class="card-text">project description:{{project.description}}</p>
@@ -66,12 +83,9 @@
       
         </div>
       
-      </div>
-    {% endfor %}
-  {% endif %}
-  </div>
+      </div> -->
+        {% endfor %}
+        {% endif %}
+    </div>
 </div>
 {% endblock %}
-
-
-

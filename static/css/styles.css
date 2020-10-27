@@ -1,0 +1,35 @@
+/* .pepe{
+    color: turquoise;
+}
+
+#circleBar{
+    margin-top: 180px;
+    text-align: center;
+    font-family: tahoma;
+
+}
+
+#circleBar.round{
+    min-height:255px;
+    margin-top:30px;
+    position: relative;
+    margin-bottom: 20px;
+
+}
+
+/* #circleBar.round strong{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    transform: translate(-50px);
+    font-size: 40px;
+    color: #212121;
+    font-weight: 100;
+} */ 
+
+
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
