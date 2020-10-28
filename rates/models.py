@@ -38,17 +38,23 @@ class Project(models.Model):
     date_craeted= models.DateField(auto_now_add=True )
     
 
+
+    def save_project(self):
+        self.save()
+
     @classmethod
     def all_projects(cls) :
         projects = cls.objects.all()
         return projects
 
 
-
     @classmethod
     def search_by_title(cls,search_term):
         projects = cls.objects.filter(title__icontains=search_term)
         return projects
+
+
+     
 
     def __str__(self):
         return self.title
